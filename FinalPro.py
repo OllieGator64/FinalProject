@@ -1,13 +1,13 @@
 
 class Customer:
-    def __init__(self, lname, IDNumber, PhoneNumber):
+    def __init__(self, lname, CustomerID, PhoneNumber):
         self.lname = lname
-        self.IDNumber = IDNumber
+        self.CustomerID = CustomerID
         self.PhoneNumber = PhoneNumber
 
     def display(self):
         print("The customer's last name is: " & self.lname)
-        print("The customer's ID is: " & self.IDNumber)
+        print("The customer's ID is: " & self.CustomerID)
         print("The customer's Phone Number is: " & self.PhoneNumber)
 
 
@@ -36,3 +36,30 @@ class Shop:
         self.CustomerList = CustomerList
         self.RentalList = RentalList
         self.TotalIncome = TotalIncome
+
+    def setupinventory(self, setSkis, setSnowboards):
+        self.InventorySkis = setSkis
+        self.InventorySnowboards = setSnowboards
+
+    def addcustomer(self):
+        #makes a new customer object
+
+    def addrental(self):
+        #makes a new rental object
+    def findcustomer(self, CustomerIDtoFind):
+        for Customer in CustomerList:
+            if Customer.CustomerID == CustomerIDtoFind:
+                return Customer
+        return None
+
+    def findrental(self, RentalIDtoFind):
+        for Rental in RentalList:
+            if Rental.RentID == RentalIDtoFind:
+                return Rental
+        return None
+
+    def completerental(self):
+        #completes current rental
+
+    def findcustomerrental(self):
+        #finds the customer's rental
